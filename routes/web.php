@@ -32,6 +32,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('time/edit', 'Admin\TimeController@edit')->middleware('auth');
     Route::post('time/edit', 'Admin\TimeController@update');
     Route::get('time/delete', 'Admin\TimeController@delete');
+    Route::get('time/return', 'Admin\TimeController@return')->middleware('auth');
+    Route::post('time/return', 'Admin\TimeController@register');
 });
 
 Auth::routes();

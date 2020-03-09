@@ -99,4 +99,23 @@ class TimeController extends Controller
         $task->delete();
         return redirect('admin/time/index');
     }
+    
+    public function return(Request $request) {
+        $user_id = Auth::id();
+        $task = Task::find($request->id);
+        if (empty($task)) {
+            abort(404);
+        }
+        return view('admin.time.return', ['task_form' => $task, 'user_id' => $user_id]);
+    }
+    
+    public function register(Request $request) {
+        $this->validate($request, Task::$rules);
+        $task = new Task;
+        $form = $request->all();
+        unset($form['_token']);
+        $task->fill($form);
+        $task->save();
+        return redirect('admin/task/index');
+    }
 }

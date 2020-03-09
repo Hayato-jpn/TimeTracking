@@ -32,13 +32,14 @@
                         <thead>
                             <tr>
                                 <th width="10%">カテゴリー</th>
-                                <th width="20%">タイトル</th>
-                                <th width="20%">内容</th>
+                                <th width="18%">タイトル</th>
+                                <th width="15%">内容</th>
                                 <th width="10%">日付</th>
                                 <th width="10%">開始時間</th>
                                 <th width="10%">終了時間</th>
-                                <th width="10%">編集</th></th>
-                                <th width="10%">削除</th>
+                                <th width="7%">編集</th></th>
+                                <th width="7%">削除</th>
+                                <th width="9%">変更</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,6 +59,11 @@
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\TimeController@delete', ['id' => $task->id]) }}">削除</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\TimeController@return', ['id' => $task->id]) }}">残タスクへ</a>
                                         </div>
                                     </td>
                                 </tr>
