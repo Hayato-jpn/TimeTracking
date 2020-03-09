@@ -24,6 +24,10 @@ class Task extends Model
                 [$startHour, $startMinute, $startSecond] = explode(":", $start);
                 [$stopHour, $stopMinute, $stopSecond] = explode(":", $stop);
                 
+                if ($stopHour < $startHour) {
+                    $stopHour += 24;
+                }
+                
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
@@ -41,6 +45,10 @@ class Task extends Model
                 
                 [$startHour, $startMinute, $startSecond] = explode(":", $start);
                 [$stopHour, $stopMinute, $stopSecond] = explode(":", $stop);
+                
+                if ($stopHour < $startHour) {
+                    $stopHour += 24;
+                }
                 
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
@@ -60,6 +68,10 @@ class Task extends Model
                 [$startHour, $startMinute, $startSecond] = explode(":", $start);
                 [$stopHour, $stopMinute, $stopSecond] = explode(":", $stop);
                 
+                if ($stopHour < $startHour) {
+                    $stopHour += 24;
+                }
+                
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
@@ -78,6 +90,10 @@ class Task extends Model
                 [$startHour, $startMinute, $startSecond] = explode(":", $start);
                 [$stopHour, $stopMinute, $stopSecond] = explode(":", $stop);
                 
+                if ($stopHour < $startHour) {
+                    $stopHour += 24;
+                }
+                
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
@@ -95,6 +111,10 @@ class Task extends Model
                 
                 [$startHour, $startMinute, $startSecond] = explode(":", $start);
                 [$stopHour, $stopMinute, $stopSecond] = explode(":", $stop);
+                
+                if ($stopHour < $startHour) {
+                    $stopHour += 24;
+                }
                 
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
