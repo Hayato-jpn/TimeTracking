@@ -25,6 +25,7 @@
                 </form>
             </div>
         </div>
+        <h5>タイムトラッキングを「開始」「停止」する場合は、該当タスク「ステータス」をタップして下さい。</h5>
         <div class="row">
             <div class="list-news col-md-12 mx-auto">
                 <div class="row">

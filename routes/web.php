@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Admin\TaskController@about');
+Route::get('about', 'Admin\TaskController@about');
+Route::get('home', 'Admin\TaskController@about');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('task/create', 'Admin\TaskController@create')->middleware('auth');
@@ -35,5 +35,3 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

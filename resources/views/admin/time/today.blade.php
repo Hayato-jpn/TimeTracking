@@ -14,7 +14,7 @@
                 <h4>家事：{{ $housework }} 分</h4>
                 <h4>筋トレ：{{ $training }} 分</h4>
                 <br />
-                <p>タスク別作業時間を確認する場合は<a href="">コチラ</a>をご確認下さい。</p>
+                <p>タスク別作業時間を確認する場合は<a href="{{ url('admin/time/index') }}">コチラ</a>をご確認下さい。</p>
             </div>
         </div>
 @endsection

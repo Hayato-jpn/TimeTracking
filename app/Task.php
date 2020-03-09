@@ -11,7 +11,7 @@ class Task extends Model
     public static $rules = array(
         'category' => 'required',
         'title' => 'required',
-        'deadline' => 'required',
+        'deadline' => 'after:yesterday',
     );
     
     public static function getTodayStudy($tasks) {

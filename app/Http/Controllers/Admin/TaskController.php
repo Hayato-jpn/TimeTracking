@@ -10,6 +10,10 @@ use App\Task;
 class TaskController extends Controller
 {
     //
+    public function about() {
+        return view('about');
+    }
+    
     public function create() {
         $user_id = Auth::id();
         return view('admin.task.create', ['user_id' => $user_id]);

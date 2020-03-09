@@ -31,8 +31,8 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('about') }}">
+                        <img src="{{ asset('image/timetracking_logo.jpg') }}" height="50px" width="100px"></img>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -40,8 +40,26 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
-
+                        <ul class="navbar-nav mr-auto menu">
+                            <li class="menu__single nav-item">
+                                <a href="#" class="init-bottom nav-link">︎TASK</a>
+                                <ul class="menu__second-level">
+                                    <li><a href="{{ url('admin/task/create') }}">タスク新規作成</a></li>
+                                    <li><a href="{{ url('admin/task/index') }}">残タスク一覧</a></li>
+                                    <li><a href="{{ url('admin/time/index') }}">完了タスク一覧</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__single nav-item">
+                                <a href="#" class="init-bottom nav-link">TIME</a>
+                                <ul class="menu__second-level">
+                                    <li><a href="{{ url('admin/time/today') }}">本日の進捗</a></li>
+                                    <li><a href="{{ url('admin/task/index') }}">タイムトラッキング開始</a></li>
+                                    <li><a href="{{ url('admin/task/index') }}">タイムトラッキング停止</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__single nav-item">
+                                <a href="{{ url('about') }}" class="init-bottom nav-link">ABOUT</a>
+                            </li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
