@@ -32,11 +32,23 @@ class TaskController extends Controller
     public function index(Request $request) {
         $user_id = Auth::id();
         $cond_title = $request->cond_title;
+        $taskQuery = Task::where('user_id', $user_id)
+            // ->where('status', '=', "未着手")
+            // ->orwhere('status', '=', "作業中")
+            // ->orderBy('deadline','asc');
+            
+            ->where(function($query) {
+                return $query
+                    ->orWhere('status', '=', "未着手")
+                    ->orWhere('status', '=', "作業中");
+            })
+            ->orderBy('deadline','asc');
+        
         if ($cond_title != '') {
-            $tasks = Task::where('user_id', $user_id)->where('status', '=', "未着手")->orwhere('status', '=', "作業中")->where('title', 'like', "%{$cond_title}%")->orderBy('deadline','asc')->get();
-        } else {
-            $tasks = Task::where('user_id', $user_id)->where('status', '=', "未着手")->orwhere('status', '=', "作業中")->orderBy('deadline','asc')->get();
+            $taskQuery->where('title', 'like', "%{$cond_title}%");
         }
+        $tasks = $taskQuery->get();
+        // dd($taskQuery->toSql());
         return view('admin.task.index', ['tasks' => $tasks, 'cond_title' => $cond_title]);
     }
     
