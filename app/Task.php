@@ -31,6 +31,15 @@ class Task extends Model
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
+                
+                //1時間以上あれば、◯◯時間xx分という形にする
+                if ($output >= 60) {
+                    $hour = floor($output / 60);
+                    $minute = $output % 60;
+                    $output = "{$hour} 時間{$minute} 分";
+                } else {
+                    $output = "{$output} 分";
+                }
             }
         }
         return $output;
@@ -53,6 +62,15 @@ class Task extends Model
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
+                
+                //1時間以上あれば、◯◯時間xx分という形にする
+                if ($output >= 60) {
+                    $hour = floor($output / 60);
+                    $minute = $output % 60;
+                    $output = "{$hour} 時間{$minute} 分";
+                } else {
+                    $output = "{$output} 分";
+                }
             }
         }
         return $output;
@@ -75,6 +93,15 @@ class Task extends Model
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
+                
+                //1時間以上あれば、◯◯時間xx分という形にする
+                if ($output >= 60) {
+                    $hour = floor($output / 60);
+                    $minute = $output % 60;
+                    $output = "{$hour} 時間{$minute} 分";
+                } else {
+                    $output = "{$output} 分";
+                }
             }
         }
         return $output;
@@ -97,6 +124,15 @@ class Task extends Model
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
+                
+                //1時間以上あれば、◯◯時間xx分という形にする
+                if ($output >= 60) {
+                    $hour = floor($output / 60);
+                    $minute = $output % 60;
+                    $output = "{$hour} 時間{$minute} 分";
+                } else {
+                    $output = "{$output} 分";
+                }
             }
         }
         return $output;
@@ -119,6 +155,15 @@ class Task extends Model
                 //分換算
                 $output += ($stopHour - $startHour) * 60;
                 $output += ($stopMinute - $startMinute);
+                
+                //1時間以上あれば、◯◯時間xx分という形にする
+                if ($output >= 60) {
+                    $hour = floor($output / 60);
+                    $minute = $output % 60;
+                    $output = "{$hour} 時間{$minute} 分";
+                } else {
+                    $output = "{$output} 分";
+                }
             }
         }
         return $output;
