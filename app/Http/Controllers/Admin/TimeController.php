@@ -61,6 +61,13 @@ class TimeController extends Controller
         $housework = Task::getTodayHousework($tasks);
         $training = Task::getTodayTraining($tasks);
         
+        $array = [$study, $work, $reading, $housework, $training];
+        foreach ($array as $a) {
+            if (empty($a)) {
+                $a = "0 分";
+            }
+        }
+        
         return view('admin.time.today', compact('study', 'work', 'reading', 'housework', 'training'));
     }
     
