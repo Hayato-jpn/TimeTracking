@@ -37,10 +37,8 @@ class Task extends Model
                     $hour = floor($output / 60);
                     $minute = $output % 60;
                     $output = "{$hour} 時間 {$minute} 分";
-                } elseif ($output > 0 && $output < 60) {
-                    $output = "{$output} 分";
                 } else {
-                    $output = "0 分";
+                    $output = "{$output} 分";
                 }
             }
         }
@@ -70,10 +68,8 @@ class Task extends Model
                     $hour = floor($output / 60);
                     $minute = $output % 60;
                     $output = "{$hour} 時間 {$minute} 分";
-                } elseif ($output > 0 && $output < 60) {
-                    $output = "{$output} 分";
                 } else {
-                    $output = "0 分";
+                    $output = "{$output} 分";
                 }
             }
         }
@@ -103,10 +99,8 @@ class Task extends Model
                     $hour = floor($output / 60);
                     $minute = $output % 60;
                     $output = "{$hour} 時間 {$minute} 分";
-                } elseif ($output > 0 && $output < 60) {
-                    $output = "{$output} 分";
                 } else {
-                    $output = "0 分";
+                    $output = "{$output} 分";
                 }
             }
         }
@@ -136,10 +130,8 @@ class Task extends Model
                     $hour = floor($output / 60);
                     $minute = $output % 60;
                     $output = "{$hour} 時間 {$minute} 分";
-                } elseif ($output > 0 && $output < 60) {
-                    $output = "{$output} 分";
                 } else {
-                    $output = "0 分";
+                    $output = "{$output} 分";
                 }
             }
         }
@@ -169,10 +161,8 @@ class Task extends Model
                     $hour = floor($output / 60);
                     $minute = $output % 60;
                     $output = "{$hour} 時間 {$minute} 分";
-                } elseif ($output > 0 && $output < 60) {
-                    $output = "{$output} 分";
                 } else {
-                    $output = "0 分";
+                    $output = "{$output} 分";
                 }
             }
         }
