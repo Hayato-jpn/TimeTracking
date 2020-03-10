@@ -14,6 +14,7 @@
 Route::get('/', 'Admin\TaskController@about');
 Route::get('about', 'Admin\TaskController@about');
 Route::get('home', 'Admin\TaskController@about');
+Route::get('test', 'Admin\TaskController@about');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('task/create', 'Admin\TaskController@create')->middleware('auth');
